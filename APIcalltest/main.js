@@ -12,14 +12,14 @@ function getMarvelResponse() {
   var characterId = '1009718'; // wolverine                                                                             
 
 
-  var url = 'http://gateway.marvel.com:80/v1/public/comics';
+  var url = 'http://gateway.marvel.com:80/v1/public/characters';
 
   console.log(url);
   $.getJSON(url, {
     ts: ts,
     apikey: PUBLIC_KEY,
     hash: hash,
-    characters: characterId
+    //characters: characterId
     })
     .done(function(data) {
       // sort of a long dump you will need to sort through
@@ -32,6 +32,3 @@ function getMarvelResponse() {
 };
 
 getMarvelResponse();
-
-
-
