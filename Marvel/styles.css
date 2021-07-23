@@ -10,6 +10,26 @@ body {
   margin: 0;
 }
 
+.jumbotron {
+  min-height: 400px;
+  background-image: url("header_image.jpg");
+  background-size: cover;
+  color: aqua;
+}
+
+.head-text h1 {
+  font-size: 4em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: goldenrod;
+  text-align: center;
+}
+
+.head-text h3 {
+  font-size: 2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
 /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
 .wrapper {
   position: relative;
@@ -46,10 +66,13 @@ body {
   border-radius: 0px;
   margin-bottom: 0;
   height: 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /* This CSS styles the ufo icon in the navbar */
-.nav-ufo {
+.nav-avenger {
   position: absolute;
   bottom: 10px;
   left: 155px;
