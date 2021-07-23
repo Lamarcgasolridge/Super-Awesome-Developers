@@ -1,253 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <!--===== Meta data =====-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Jorden Vijayaratnam">
-    <!--===== CSS libraries =====-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="static/css/libraries/dc.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
-    <!--===== My CSS libraries =====-->
-    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
-    <!--===== JS Libraries =====-->
-    <script src="static/js/libraries/d3.min.js"></script>
-    <script src="static/js/libraries/crossfilter.min.js"></script>
-    <script src="static/js/libraries/dc.min.js"></script>
-    <script src="static/js/libraries/queue.min.js"></script>
-    <script src="static/js/graph.js"></script>
-    <!--===== Title =====-->
-    <title> The Most SAD AVENGER Dashboard </title>
+    <head>
+        <!--===== Meta data =====-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Jorden Vijayaratnam">
+        <!--===== CSS libraries =====-->
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            type="text/css" />
+        <link rel="stylesheet" href="static/css/libraries/dc.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
+            integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+            type="text/css" />
+        <!--===== My CSS libraries =====-->
+        <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+        <!--===== JS Libraries =====-->
+        <script src="static/js/libraries/d3.min.js"></script>
+        <script src="static/js/libraries/crossfilter.min.js"></script>
+        <script src="static/js/libraries/dc.min.js"></script>
+        <script src="static/js/libraries/queue.min.js"></script>
+        <script src="static/js/graph.js"></script>
+        <!--===== Title =====-->
+        <title> The Most SAD AVENGER Dashboard </title>
 
-</head>
+    </head>
 
 
-<body class="background-image">
-<!-- 
-    <!--===== Bootstrap naviagtion bar =====-->
-    <nav class="navbar-image">
-        <div class="container-fluid">
-            <div class="row">
+    <body class="background-image">
+        <!-- ===== Bootstrap naviagtion bar ===== -->
+        <nav class="navbar-image">
+            <div class="container-fluid">
+                <div class="row">
                     <div class="col-xs-12 col-sm-12 main-header">
                         <!-- INSERT HEADER IMAGE BELOW -->
-                         <a><img class="navbar-image" src="static/images/header_image.jpg"  alt="anvergers header" height="100%" width="100%"></a>
-                </div>
-            </div>
-        </div>
-    </nav> --> -->
-
-    <nav class="navbar">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="col-xs-2">
-                        <a class="navbar-brand"><img alt="Pokemon image" src="static/images/navlogo.png" height="50" width="50"></a>
-                    </div>
-                    <div class="col-xs-10 col-sm-8 main-header">
-                        <a><img class="navbar-header" src="https://fontmeme.com/permalink/210717/ddd392e2971061394d9ccb126bc5b380.png" alt="Pokemon dashboard logo" height="50" width="100%"></a>
-                    </div>
-                    <div class="hidden-xs col-sm-2">
-                        <a data-toggle="modal" data-target="#myModal" class="info-icons hvr-grow"><i class="fas fa-question-circle"></i></a>
+                        <a><img class="navbar-image" src="./images/header_image.jpg"
+                                alt="anvergers header" height="100%" width="100%"></a>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!--===== Boostrap modal =====-->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">SAD Avenger dashboard</h4>
-                </div>
-                <div class="modal-body">
-                    <p> Welcome to the SAD Avenger Dashboard!</p>
-                    <p> Insert Sub Title Here. </p>
-                    <p>Insert Text HERE</p>
-                    <p><u>How to use</u></p>
-                    <p> More Text</p>
-                    <p> More Text</p>
-                    <p> More Text</p>
-                    <p> More Text</p>
-                    <p> More Text</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Let's get started</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="container">
-
-        <!--===== Info modal mobile only* This is the question mark info =====-->
-        <div class="row">
-            <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
-                <div class="content-style">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <a data-toggle="modal" data-target="#myModal" class="hvr-grow"><i class="fas fa-question-circle"></i></a>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-2">
+                            <a class="navbar-brand"><img alt="Pokemon image"
+                                    src="./images/navlogo.png" height="50" width="50"></a>
+                        </div>
+                        <div class="hidden-xs col-sm-2">
+                            <a data-toggle="modal" data-target="#myModal"
+                                class="info-icons hvr-grow"><i
+                                    class="fas fa-question-circle"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
+        </nav>
+
+        <!--===== Boostrap modal =====-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+            aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">SAD Avenger dashboard</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p> Welcome to the SAD Avenger Dashboard!</p>
+                        <p> Insert Sub Title Here. </p>
+                        <p>Insert Text HERE</p>
+                        <p><u>How to use</u></p>
+                        <p> More Text</p>
+                        <p> More Text</p>
+                        <p> More Text</p>
+                        <p> More Text</p>
+                        <p> More Text</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Let's get
+                            started</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!--===== ORIGINAL LOCATION Reset data =====-->
-        <!-- <div class="button-wrapper">
+        <section class="container">
+
+            <!--===== Info modal mobile only* This is the question mark info =====-->
+            <div class="row">
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                    <div class="content-style">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a data-toggle="modal" data-target="#myModal" class="hvr-grow"><i
+                                        class="fas fa-question-circle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--===== ORIGINAL LOCATION Reset data =====-->
+            <!-- <div class="button-wrapper">
             <div class="reset-button hvr-grow">
                 <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
             </div>
         </div> -->
 
-        <!--===== Avenger selector and Reset =====-->
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="row height-alignment">
-                    <div class="col-xs-12 col-sm-6 height-alignment">
-                        <div id="select-pokemon" class="content-style">
-                            <h4> Select your Avenger</h4>
-                            <hr>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 height-alignment">
-                        <div class="button-wrapper">
-                            <div class="reset-button hvr-grow">
-                                <a href="javascript:dc.filterAll(); dc.renderAll();">Reset</a>
-                            </div>
-                        </div>
-
-                </div>
-            </div>
-        </div>
-
-
-        <!--===== Two Charts =====-->
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="row height-alignment">
-                    <div class="col-xs-12 col-sm-6 height-alignment">
-                        <div class="content-style dc-chart">
-                            <div id="pokemon-height">
-                                <h4>Graphic 1</h4>
-                                <hr>
-                            </div>
-                            <p> Over half of the Pokemon sit between 5 and 16 ft tall.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 height-alignment">
-                        <div class="content-style dc-chart">
-                            <div id="pokemon-weight">
-                                <h4>Graphic 2</h4>
-                                <hr>
-                            </div>
-                            <p>Over half of the Pokemon weight over 250lbs!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--===== 3 Pie Graphs  =====-->
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="row height-alignment">
-                    <div class="col-xs-12 col-sm-4 height-alignment">
-                        <div class="content-style dc-chart ">
-                            <div id="pokemon-gen-type">
-                                <h4> Eye Color </h4>
-                                <hr>
-                            </div>
-                            <p>Since generation 1 was released in 1996 with the original 166 Pokemon there have been a further 634 Pokemon added to the franchise.</p>
-                            <p> No wonder some of the older generation do not recognise the Pokemon of today!</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 height-alignment">
-                        <div class="content-style dc-chart">
-                            <div id="legendary-pokemon">
-                                <h4> Hair Color</h4>
-                                <hr>
-                            </div>
-                            <p> Less than 10% of total Pokemon are classified as Legendary making them sought after creatures.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 height-alignment">
-                        <div class="content-style dc-chart">
-                            <div id="pokemon-color">
-                                <h4> Living/Deceased </h4>
-                                <hr>
-                            </div>
-                            <p> There is a slight correlation between types of Pokemon and their colours.</p>
-                            <p> Select a colour and check out the type chart above. For example, of the 178 Blue Pokemon, 40% of them are Water types. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!--===== NOTE: Without the code below none of the Pokemon Charts Show!! Stats histo Not Using=====-->
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="content-style dc-chart">
-                    <div id="statsHisto">
-                        <h4> Pokemon overall stats </h4>
-                        <hr>
-                    </div>
-                    <p> This graph combines all the Pokemon known stats and gives them an overall score. </p>
-                    <p> You can see that a score of 601 seems to be common with 37 Pokemon sharing that score.</p>
-                    <p> Also note there are no Legendary Pokemon with a combine score of less that 575 (filter to Legendary Pokemon below to see for yourself)</p>
-                </div>
-            </div>
-        </div>
-
-
-
-        <!--===== NOTE: Without the code below none of the Pie Charts Use!row chart NOT USING =====-->
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="content-style dc-chart">
-                    <div id="pokemon-type">
-                        <h4> Pokemon type </h4>
-                        <hr>
-                    </div>
-                    <p> As you an see there is a larger split of Water type Pokemon.</p>
-                    <p> The creators must have realised this and adjusted the types of Pokemon as 10% of the total Pokemon through generations 1-3 were water vs only 5% through gen 4-6.</p>
-                </div>
-            </div>
-        </div>
-
-
-        <!--===== Reset data =====-->
-        <div class="button-wrapper">
-            <div class="reset-button hvr-grow">
-                <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
-            </div>
-        </div>
-    </section>
-    <!--===== Footer =====-->
-    <footer class="navbar navbar-default">
-        <div class="container-fluid">
+            <!--===== Avenger selector and Reset =====-->
             <div class="row">
-                <div class="col-xs-12 col-sm-6 main-header">
-                    <a class="footer-image"><img src="https://fontmeme.com/permalink/210721/403437d311ec9fb96df0d0850cf669a1.png" alt="Made by Jorden Vijayaratnam logo" height="50" width="100%"></a>
+                <div class="col-xs-12">
+                    <div class="row height-alignment">
+                        <div class="col-xs-12 col-sm-6 height-alignment">
+                            <div id="select-pokemon" class="content-style">
+                                <h4> Select your Avenger</h4>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 height-alignment">
+                            <div class="button-wrapper">
+                                <div class="reset-button hvr-grow">
+                                    <a href="javascript:dc.filterAll(); dc.renderAll();">Reset</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 main-header">
-                    <a href="https://github.com/Lamarcgasolridge/Super-Awesome-Developers" target="_blank" class="hvr-grow"><i class="fab fa-github github-logo"></i></a>
+
+
+                <!--===== Two Charts =====-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="row height-alignment">
+                            <div class="col-xs-12 col-sm-6 height-alignment">
+                                <div class="content-style dc-chart">
+                                    <div id="pokemon-height">
+                                        <h4>Graphic 1</h4>
+                                        <hr>
+                                    </div>
+                                    <p> Over half of the Pokemon sit between 5 and 16 ft tall.</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 height-alignment">
+                                <div class="content-style dc-chart">
+                                    <div id="pokemon-weight">
+                                        <h4>Graphic 2</h4>
+                                        <hr>
+                                    </div>
+                                    <p>Over half of the Pokemon weight over 250lbs!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--===== 3 Pie Graphs  =====-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="row height-alignment">
+                            <div class="col-xs-12 col-sm-4 height-alignment">
+                                <div class="content-style dc-chart ">
+                                    <div id="pokemon-gen-type">
+                                        <h4> Eye Color </h4>
+                                        <hr>
+                                    </div>
+                                    <p>Since generation 1 was released in 1996 with the original 166
+                                        Pokemon there have been a further 634 Pokemon added to the
+                                        franchise.</p>
+                                    <p> No wonder some of the older generation do not recognise the
+                                        Pokemon of today!</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 height-alignment">
+                                <div class="content-style dc-chart">
+                                    <div id="legendary-pokemon">
+                                        <h4> Hair Color</h4>
+                                        <hr>
+                                    </div>
+                                    <p> Less than 10% of total Pokemon are classified as Legendary
+                                        making them sought after creatures.</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 height-alignment">
+                                <div class="content-style dc-chart">
+                                    <div id="pokemon-color">
+                                        <h4> Living/Deceased </h4>
+                                        <hr>
+                                    </div>
+                                    <p> There is a slight correlation between types of Pokemon and
+                                        their colours.</p>
+                                    <p> Select a colour and check out the type chart above. For
+                                        example, of the 178 Blue Pokemon, 40% of them are Water
+                                        types. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--===== NOTE: Without the code below none of the Pokemon Charts Show!! Stats histo Not Using=====-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="content-style dc-chart">
+                            <div id="statsHisto">
+                                <h4> Pokemon overall stats </h4>
+                                <hr>
+                            </div>
+                            <p> This graph combines all the Pokemon known stats and gives them an
+                                overall score. </p>
+                            <p> You can see that a score of 601 seems to be common with 37 Pokemon
+                                sharing that score.</p>
+                            <p> Also note there are no Legendary Pokemon with a combine score of
+                                less that 575 (filter to Legendary Pokemon below to see for
+                                yourself)</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!--===== NOTE: Without the code below none of the Pie Charts Use!row chart NOT USING =====-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="content-style dc-chart">
+                            <div id="pokemon-type">
+                                <h4> Pokemon type </h4>
+                                <hr>
+                            </div>
+                            <p> As you an see there is a larger split of Water type Pokemon.</p>
+                            <p> The creators must have realised this and adjusted the types of
+                                Pokemon as 10% of the total Pokemon through generations 1-3 were
+                                water vs only 5% through gen 4-6.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--===== Reset data =====-->
+                <div class="button-wrapper">
+                    <div class="reset-button hvr-grow">
+                        <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+                    </div>
+                </div>
+        </section>
+        <!--===== Footer =====-->
+        <footer class="footer">
+            <div class="bottom">Avenger Collections</div>
+        </footer>
+        <!-- <footer class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 main-header">
+                        <a class="footer-image"><img
+                                src="https://fontmeme.com/permalink/210721/403437d311ec9fb96df0d0850cf669a1.png"
+                                alt="Made by Jorden Vijayaratnam logo" height="50" width="100%"></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 main-header">
+                        <a href="https://github.com/Lamarcgasolridge/Super-Awesome-Developers"
+                            target="_blank" class="hvr-grow"><i
+                                class="fab fa-github github-logo"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer> -->
 
-    <!--===== jQuery =====-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
+        <!--===== jQuery =====-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    </body>
 
 </html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!--===== Meta data =====-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Jorden Vijayaratnam">
+        <!--===== CSS libraries =====-->
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            type="text/css" />
+        <link rel="stylesheet" href="static/css/libraries/dc.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
+            integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+            type="text/css" />
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/quartz/bootstrap.min.css">
+        <!--===== My CSS libraries =====-->
+        <link rel="stylesheet" href="styles.css" type="text/css" />
+        <!--===== JS Libraries =====-->
+        <script src="static/js/libraries/d3.min.js"></script>
+        <script src="static/js/libraries/crossfilter.min.js"></script>
+        <script src="static/js/libraries/dc.min.js"></script>
+        <script src="static/js/libraries/queue.min.js"></script>
+        <script src="static/js/graph.js"></script>
+        <!--===== Title =====-->
+        <title> The World of Avengers </title>
+
+    </head>
+
+    <!-- ===== Bootstrap naviagtion bar ===== -->
+
+    <body class="background-image">
+        <div class="wrapper">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html"><b>Avengers</b>
+                            <img class="nav-ufo" src="logo.png">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero text-center">
+                <!-- <h1>Welcome to the Marvel Universe</h1>
+                <p>Use the interactive charts below to explore the Marvel world</p> -->
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 jumbotron text-center">
+                        <h1>Welcome to the Marvel Universe</h1>
+                        <p>Use the interactive charts below to explore the Marvel world</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class=" col-sm-2 well">
+                            <h5>Select Your Avenger</h5>
+                            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="reset">Reset Graphs</button>
+                        </div>
+                        <!-- <div class=" col-sm-4 panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Demographic Info</h3>
+                            </div>
+                            <div id="sample-metadata" class="panel-body"></div>
+                        </div> -->
+                    </div>
+                    <div class="col-md-5">
+                        <div id="bar"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div id="gauge"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="bubble"></div>
+                    </div>
+                </div>
+            </div>
+            <!--===== Avenger selector and Reset =====-->
+            <!-- <div class="container">
+                <div class="row">
+                    <div class="row height-alignment">
+                        <div class="col-xs-12 col-sm-6 height-alignment">
+                            <div id="select-pokemon" class="content-style">
+                                <h4> Select your Avenger</h4>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 height-alignment">
+                            <div class="button-wrapper">
+                                <div class="reset-button hvr-grow">
+                                    <a href="javascript:dc.filterAll(); dc.renderAll();">Reset</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--===== Two Charts =====-->
+            <!-- <div class="row">
+                <div class="col-xs-12">
+                    <div class="row height-alignment">
+                        <div class="col-xs-12 col-sm-6 height-alignment">
+                            <div class="content-style dc-chart">
+                                <div id="pokemon-height">
+                                    <h4>Graphic 1</h4>
+                                    <hr>
+                                </div>
+                                <p> Over half of the Pokemon sit between 5 and 16 ft tall.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 height-alignment">
+                            <div class="content-style dc-chart">
+                                <div id="pokemon-weight">
+                                    <h4>Graphic 2</h4>
+                                    <hr>
+                                </div>
+                                <p>Over half of the Pokemon weight over 250lbs!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--===== 3 Pie Graphs  =====-->
+            <!-- <div class="row">
+                <div class="col-xs-12">
+                    <div class="row height-alignment">
+                        <div class="col-xs-12 col-sm-4 height-alignment">
+                            <div class="content-style dc-chart ">
+                                <div id="pokemon-gen-type">
+                                    <h4> Eye Color </h4>
+                                    <hr>
+                                </div>
+                                <p>Since generation 1 was released in 1996 with the original
+                                    166
+                                    Pokemon there have been a further 634 Pokemon added to
+                                    the
+                                    franchise.</p>
+                                <p> No wonder some of the older generation do not recognise
+                                    the
+                                    Pokemon of today!</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 height-alignment">
+                            <div class="content-style dc-chart">
+                                <div id="legendary-pokemon">
+                                    <h4> Hair Color</h4>
+                                    <hr>
+                                </div>
+                                <p> Less than 10% of total Pokemon are classified as
+                                    Legendary
+                                    making them sought after creatures.</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 height-alignment">
+                            <div class="content-style dc-chart">
+                                <div id="pokemon-color">
+                                    <h4> Living/Deceased </h4>
+                                    <hr>
+                                </div>
+                                <p> There is a slight correlation between types of Pokemon
+                                    and
+                                    their colours.</p>
+                                <p> Select a colour and check out the type chart above. For
+                                    example, of the 178 Blue Pokemon, 40% of them are Water
+                                    types. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <!--===== NOTE: Without the code below none of the Pokemon Charts Show!! Stats histo Not Using=====-->
+            <!-- <div class="row">
+                <div class="col-xs-12">
+                    <div class="content-style dc-chart">
+                        <div id="statsHisto">
+                            <h4> Pokemon overall stats </h4>
+                            <hr>
+                        </div>
+                        <p> This graph combines all the Pokemon known stats and gives them
+                            an
+                            overall score. </p>
+                        <p> You can see that a score of 601 seems to be common with 37
+                            Pokemon
+                            sharing that score.</p>
+                        <p> Also note there are no Legendary Pokemon with a combine score of
+                            less that 575 (filter to Legendary Pokemon below to see for
+                            yourself)</p>
+                    </div>
+                </div>
+            </div> -->
+
+
+
+            <!--===== NOTE: Without the code below none of the Pie Charts Use!row chart NOT USING =====-->
+            <!-- <div class="row">
+                <div class="col-xs-12">
+                    <div class="content-style dc-chart">
+                        <div id="pokemon-type">
+                            <h4> Pokemon type </h4>
+                            <hr>
+                        </div>
+                        <p> As you an see there is a larger split of Water type Pokemon.</p>
+                        <p> The creators must have realised this and adjusted the types of
+                            Pokemon as 10% of the total Pokemon through generations 1-3 were
+                            water vs only 5% through gen 4-6.</p>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <!--===== Reset data =====-->
+            <div class="button-wrapper">
+                <div class="reset-button hvr-grow">
+                    <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+                </div>
+            </div>
+            </section>
+            <!--===== Footer =====-->
+            <footer class="footer">
+                <div class="bottom">Avenger Collections</div>
+            </footer>
+        </div>
+        </div>
+
+        <!--===== jQuery =====-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marvel</title>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 jumbotron text-center">
+                    <h1>Welcome to the Marvel Universe</h1>
+                    <p>Use the interactive charts below to explore the Marvel world</p>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+
+</html> -->
