@@ -77,8 +77,8 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
     /*--------------------------Bubble chart--------------------------------*/
  
     // For alignment, find # of appearances and first year
-    var appearances1 =idSample[0].appearances; //update line
-    var firstYear= idSample[0].year; //update line
+    var appearances1 =idSample[0].FIRST_APPEARANCE; //update line
+    var firstYear= idSample[0].Year; //update line
  
     // Define the layout and trace object, edit color and orientation
     const trace1 = {
