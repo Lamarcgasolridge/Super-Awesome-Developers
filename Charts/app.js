@@ -45,7 +45,7 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
     console.log(alignment);
  
     // Read the json file for the data
-    d3.json("data/samples.json").then((data) => { //update line to call data
+    d3.json("data.csv").then((data) => { //update line to call data
  
     // Clears dropdown
     d3.select("#selDataset").html("");   
@@ -53,18 +53,18 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
     // Select the metadata array and for each item append the item ID and adds ID to dropdown
     data.metadata.forEach(item =>
          {
-         d3.select ("#selDataset").append('option').attr('value', item.id).text(item.id);
+         d3.select ("#selDataset").append('option').attr('value', item.align).text(item.align);
          });
     // Selected value is passed
     d3.select("#selDataset").node().value = alignment;
     
     // Filter Metadata for selected ID from dropdown
-    const idMetadata = data.metadata.filter(item=> (item.id == alignment));
+    const idMetadata = data.metadata.filter(item=> (item.align == alignment));
 
     // Check the metadata loaded for the selected ID
     console.log(idMetadata);
     
-    const panelDisplay = d3.select("#sample-metadata");
+    const panelDisplay = d3.select("#sample-metadata"); // update line with HTML
     panelDisplay.html("");
     Object.entries(idMetadata[0]).forEach(item=> 
        {
@@ -77,8 +77,8 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
     /*--------------------------Bubble chart--------------------------------*/
  
     // Remove Sample value and otuID from individual
-    var appearances1 =idSample[0].sample_values; //update line
-    var firstYear= idSample[0].otu_ids; //update line
+    var appearances1 =idSample[0].appearances; //update line
+    var firstYear= idSample[0].year; //update line
  
     // Define the layout and trace object, edit color and orientation
     const trace1 = {
@@ -102,11 +102,11 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
     
     // Plot using Plotly
     Plotly.newPlot('bubble', [trace1], layout1);
-
+ 
 /*--------------------------Bar chart with X axis variable dropdown--------------------------------*/
         //update line look at: https://codepen.io/plotly/pen/xwBNXa
 
-        
+
 /*--------------------------Donut charts--------------------------------*/
  // Donut chart variables function donutChart(dataSelect, labelsSelect, nameSelect)
     //Hair variables
