@@ -76,9 +76,9 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
 
     /*--------------------------Bubble chart--------------------------------*/
  
-    // Remove Sample value and otuID from individual
-    var appearances1 =idSample[0].appearances; //update line
-    var firstYear= idSample[0].year; //update line
+    // For alignment, find # of appearances and first year
+    var appearances1 =idSample[0].FIRST_APPEARANCE; //update line
+    var firstYear= idSample[0].Year; //update line
  
     // Define the layout and trace object, edit color and orientation
     const trace1 = {
@@ -109,39 +109,41 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
 
 /*--------------------------Donut charts--------------------------------*/
  // Donut chart variables function donutChart(dataSelect, labelsSelect, nameSelect)
+
+    Function donutInfo():
     //Hair variables
-    hairInfo = //update line, call hair column
-    var hairValue = hairInfo.legnth //update line to correct syntax
-    var hairLabels = hairInfo
-    var hairName = 'Hair'
+        hairInfo = item.hair//update line*
+        var hairValue = hairInfo.length //update line*
+        var hairLabels = hairInfo
+        var hairName = 'Hair'
 
     //Sex variables 
-    sexInfo = //update line, call sex column
-    var sexValue = sexInfo.count //update line to correct syntax
-    var sexLabels = sexInfo
-    var sexName = 'Sex'
+        sexInfo = item.sex//update line*
+        var sexValue = sexInfo.count //update line*
+        var sexLabels = sexInfo
+        var sexName = 'Sex'
 
     //Eye color variables 
-    eyeInfo = //update line, call eye column
-    var eyeValue = eyeInfo.count //update line to correct syntax
-    var eyeLabels = eyeInfo
-    var eyeName = 'Eye'
+        eyeInfo = item.eye//update line*
+        var eyeValue = eyeInfo.count //update line*
+        var eyeLabels = eyeInfo
+        var eyeName = 'Eye'
 
     //Identity variables 
-    idInfo = //update line, call id column
-    var idValue = idInfo.count //update line to correct syntax
-    var idLabels = idInfo
-    var idName = 'Identity'
+        aliveInfo = item.alive //update line*
+        var aliveValue = aliveInfo.count //update line*
+        var aliveLabels = aliveInfo
+        var aliveName = 'Alive?'
 
     //Donut functions
-    donutChart(hairValue, hairLabels, hairName);
-    donutChart(sexValue, sexLabels, sexName);
-    donutChart(eyeValue, eyeLabels, eyeName);
-    donutChart(idValue, idLabels, idName);
+        donutChart(hairValue, hairLabels, hairName);
+        donutChart(sexValue, sexLabels, sexName);
+        donutChart(eyeValue, eyeLabels, eyeName);
+        donutChart(aliveValue, aliveLabels, aliveName);
 
     //update line - Put donut charts into HTML
-
-    
+        //https://www.d3-graph-gallery.com/graph/donut_basic.html
+            
 
     )};
 
