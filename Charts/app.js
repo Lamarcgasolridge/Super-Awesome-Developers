@@ -108,7 +108,6 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
 
 
 /*--------------------------Donut charts--------------------------------*/
- // Donut chart variables function donutChart(dataSelect, labelsSelect, nameSelect)
 
     Function donutInfo():
     //Hair variables
@@ -134,7 +133,8 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
         var aliveValue = aliveInfo.count //update line*
         var aliveLabels = aliveInfo
         var aliveName = 'Alive?'
-
+        
+// Donut chart variables function donutChart(dataSelect, labelsSelect, nameSelect)
     //Donut functions
         donutChart(hairValue, hairLabels, hairName);
         donutChart(sexValue, sexLabels, sexName);
