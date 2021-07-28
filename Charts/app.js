@@ -130,16 +130,16 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
         var eyeName = 'Eye'
 
     //Identity variables 
-        idInfo = idem.id //update line*
-        var idValue = idInfo.count //update line*
-        var idLabels = idInfo
-        var idName = 'Identity'
+        aliveInfo = item.alive //update line*
+        var aliveValue = aliveInfo.count //update line*
+        var aliveLabels = aliveInfo
+        var aliveName = 'Alive?'
 
     //Donut functions
         donutChart(hairValue, hairLabels, hairName);
         donutChart(sexValue, sexLabels, sexName);
         donutChart(eyeValue, eyeLabels, eyeName);
-        donutChart(idValue, idLabels, idName);
+        donutChart(aliveValue, aliveLabels, aliveName);
 
     //update line - Put donut charts into HTML
         //https://www.d3-graph-gallery.com/graph/donut_basic.html
