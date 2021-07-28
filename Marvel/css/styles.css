@@ -12,7 +12,7 @@ body {
 
 .jumbotron {
   min-height: 400px;
-  background-image: url("header_image.jpg");
+  background-image: url("../images/header_image.jpg");
   background-size: cover;
   color: aqua;
 }

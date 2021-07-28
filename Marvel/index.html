@@ -21,13 +21,15 @@
         <link rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/quartz/bootstrap.min.css">
         <!--===== My CSS libraries =====-->
-        <link rel="stylesheet" href="styles.css" type="text/css" />
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
         <!--===== JS Libraries =====-->
         <script src="static/js/libraries/d3.min.js"></script>
         <script src="static/js/libraries/crossfilter.min.js"></script>
         <script src="static/js/libraries/dc.min.js"></script>
         <script src="static/js/libraries/queue.min.js"></script>
         <script src="static/js/graph.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="data.js"></script>
         <!--===== Title =====-->
         <title> The World of Avengers </title>
 
@@ -36,72 +38,88 @@
     <!-- ===== Bootstrap naviagtion bar ===== -->
 
     <body class="background-image">
+        <!-- Adding wrapper -->
         <div class="wrapper">
-            <nav class="navbar navbar-default">
+            <nav class="navbar navbar-default sticky">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="index.html"><b>Avengers</b>
-                            <img class="nav-ufo" src="logo.png">
+                            <img class="nav-avenger" src="./images/avenger_logo.png">
                         </a>
                     </div>
                 </div>
             </nav>
-            <div class="hero text-center">
-                <!-- <h1>Welcome to the Marvel Universe</h1>
-                <p>Use the interactive charts below to explore the Marvel world</p> -->
-            </div>
-
+            <!-- Adding jumbotron -->
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 jumbotron text-center">
-                        <h1>Welcome to the Marvel Universe</h1>
-                        <p>Use the interactive charts below to explore the Marvel world</p>
+                    <div class="col-12 jumbotron text-center">
                     </div>
                 </div>
                 <div class="row">
+                    <div class="head-text col-md-12">
+                        <h1>Welcome to the Marvel Universe</h1>
+                        <h3>Use the interactive charts below to explore the Marvel world</h3>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
                     <div class="col-12">
-                        <div class=" col-sm-4 well">
-                            <h3>Select Your Avenger</h3>
-                            <select id="selDataset" onchange="optionChanged(this.value)"></select>
-                        </div>
                         <div class="col-sm-4">
                             <button type="reset">Reset Graphs</button>
                         </div>
-                        <div class=" col-sm-4 panel panel-primary">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Facts</h3>
-                            </div>
-                            <ul>
-                                <li>Fact 1</li>
-                                <li>Fact 2</li>
-                                <li>Fact 3</li>
-                                <li>Fact 4</li>
-                                <li>Fact 5</li>
-                                <li>Fact 6</li>
-                                <li>Fact 7</li>
-                            </ul>
-                            <div id="sample-metadata" class="panel-body"></div>
+                        <div class=" col-sm-4 well">
+                            <h4>Select your character from the dropdown</h4>
+                            <select id="selDataset" onchange="optionChanged(this.value)"></select>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div id="bubble"></div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
-                                molestiae tenetur mollitia dolores porro deserunt doloremque odit
-                                qui sit iusto inventore, dolorum eaque ex voluptatum!</p>
+                            <p>Sample image</p>
+                            <img src="./images/avenger_sample.jpg" alt="Avengers poster" width="200"
+                                height="300">
                         </div>
-                        <div class="col-md-4">
+                        <div class=" col-sm-3 panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Character Facts </h3>
+                            </div>
+                            <ul>
+                                <li>HARD CODED</li>
+                                <li>Name: Spider-Man (Peter Parker)</li>
+                                <li>ID: Secret Identity</li>
+                                <li>Align: Good Characters</li>
+                                <li>Eye: Hazel Eyes</li>
+                                <li>Hair: Brown Hair</li>
+                                <li>Sex: Male Characters</li>
+                                <li>Appearances: 4037</li>
+                                <li>First Appearance: Aug-62</li>
+                                <li>Year: 1962</li>
+                            </ul>
+                            <div id="sample-metadata" class="panel-body"></div>
+                        </div>
+
+                        <div class="col-md-6">
                             <div id="bar"></div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
-                                molestiae tenetur mollitia dolores porro deserunt doloremque odit
-                                qui sit iusto inventore, dolorum eaque ex voluptatum!</p>
+                            <h3>Random Story (Placeholder Text)</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente,
+                                dolorum ipsum! Ipsa quae labore laborum eum molestias sint itaque
+                                blanditiis laboriosam doloremque quisquam. Labore necessitatibus
+                                suscipit, fuga distinctio explicabo architecto laborum aperiam
+                                eveniet ex ad neque veritatis sapiente, consequatur dolore minus
+                                accusantium officia optio aut quaerat nemo! Error odit, dignissimos
+                                hic illo natus ipsam maxime ratione? Sapiente animi consequuntur
+                                consectetur, eligendi labore doloribus nemo natus sit minima
+                                voluptatem aut officia eveniet blanditiis nisi necessitatibus veniam
+                                illo ratione, expedita tenetur! Officiis omnis et, enim impedit nam
+                                consequatur consequuntur, eum, facere eveniet nisi doloribus
+                                ducimus. Excepturi voluptas, nihil qui officiis harum error!</p>
                         </div>
                         <!-- <div class="col-md-4">
                             <div id="donut"></div>
                             <p>========Placeholder Donut Chart========</p>
-                            <img src="donut.png" alt="">
+                            <img src="./images/donut_sample.png" alt="">
                         </div> -->
                     </div>
                 </div>
@@ -110,12 +128,14 @@
                         <div class="col-md-6">
                             <div id="bubble"></div>
                             <p>======Placeholder Bubble Chart========</p>
-                            <img src="bubble.png" alt="">
+                            <img src="./images/bubble_sample.png" alt="sample bubble chart"
+                                width="600" height="300">
                         </div>
                         <div class="col-md-6">
                             <div id="bar"></div>
                             <P>========Placeholder Bar Chart========</P>
-                            <img src="bar.png" alt="">
+                            <img src="./images/bar_sample.png" alt="Sample bar chart" width="600"
+                                height="300">
                         </div>
                         <!-- <div class="col-md-4">
                             <div id="donut"></div>
@@ -142,32 +162,3 @@
     </body>
 
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Marvel</title>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    </head>
-
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 jumbotron text-center">
-                    <h1>Welcome to the Marvel Universe</h1>
-                    <p>Use the interactive charts below to explore the Marvel world</p>
-                </div>
-            </div>
-
-        </div>
-
-        <script src="main.js"></script>
-    </body>
-
-</html> -->
