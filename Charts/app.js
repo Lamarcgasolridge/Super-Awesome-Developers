@@ -110,25 +110,25 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
 /*--------------------------Donut charts--------------------------------*/
  // Donut chart variables function donutChart(dataSelect, labelsSelect, nameSelect)
     //Hair variables
-    hairInfo = //update line, call hair column
-    var hairValue = hairInfo.legnth //update line to correct syntax
+    hairInfo = item.hair//update line, call hair column
+    var hairValue = hairInfo.length //update line to correct syntax
     var hairLabels = hairInfo
     var hairName = 'Hair'
 
     //Sex variables 
-    sexInfo = //update line, call sex column
+    sexInfo = item.sex//update line, call sex column
     var sexValue = sexInfo.count //update line to correct syntax
     var sexLabels = sexInfo
     var sexName = 'Sex'
 
     //Eye color variables 
-    eyeInfo = //update line, call eye column
+    eyeInfo = item.eye//update line, call eye column
     var eyeValue = eyeInfo.count //update line to correct syntax
     var eyeLabels = eyeInfo
     var eyeName = 'Eye'
 
     //Identity variables 
-    idInfo = //update line, call id column
+    idInfo = idem.id //update line, call id column
     var idValue = idInfo.count //update line to correct syntax
     var idLabels = idInfo
     var idName = 'Identity'
