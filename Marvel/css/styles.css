@@ -30,6 +30,16 @@ body {
   text-align: center;
 }
 
+.row {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.row {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
 .wrapper {
   position: relative;
