@@ -109,35 +109,37 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
 
 /*--------------------------Donut charts--------------------------------*/
  // Donut chart variables function donutChart(dataSelect, labelsSelect, nameSelect)
+
+    Function donutInfo():
     //Hair variables
-    hairInfo = item.hair//update line, call hair column
-    var hairValue = hairInfo.length //update line to correct syntax
-    var hairLabels = hairInfo
-    var hairName = 'Hair'
+        hairInfo = item.hair//update line*
+        var hairValue = hairInfo.length //update line*
+        var hairLabels = hairInfo
+        var hairName = 'Hair'
 
     //Sex variables 
-    sexInfo = item.sex//update line, call sex column
-    var sexValue = sexInfo.count //update line to correct syntax
-    var sexLabels = sexInfo
-    var sexName = 'Sex'
+        sexInfo = item.sex//update line*
+        var sexValue = sexInfo.count //update line*
+        var sexLabels = sexInfo
+        var sexName = 'Sex'
 
     //Eye color variables 
-    eyeInfo = item.eye//update line, call eye column
-    var eyeValue = eyeInfo.count //update line to correct syntax
-    var eyeLabels = eyeInfo
-    var eyeName = 'Eye'
+        eyeInfo = item.eye//update line*
+        var eyeValue = eyeInfo.count //update line*
+        var eyeLabels = eyeInfo
+        var eyeName = 'Eye'
 
     //Identity variables 
-    idInfo = idem.id //update line, call id column
-    var idValue = idInfo.count //update line to correct syntax
-    var idLabels = idInfo
-    var idName = 'Identity'
+        idInfo = idem.id //update line*
+        var idValue = idInfo.count //update line*
+        var idLabels = idInfo
+        var idName = 'Identity'
 
     //Donut functions
-    donutChart(hairValue, hairLabels, hairName);
-    donutChart(sexValue, sexLabels, sexName);
-    donutChart(eyeValue, eyeLabels, eyeName);
-    donutChart(idValue, idLabels, idName);
+        donutChart(hairValue, hairLabels, hairName);
+        donutChart(sexValue, sexLabels, sexName);
+        donutChart(eyeValue, eyeLabels, eyeName);
+        donutChart(idValue, idLabels, idName);
 
     //update line - Put donut charts into HTML
 
