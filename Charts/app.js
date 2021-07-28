@@ -142,8 +142,8 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
         donutChart(idValue, idLabels, idName);
 
     //update line - Put donut charts into HTML
-
-    
+        //https://www.d3-graph-gallery.com/graph/donut_basic.html
+            
 
     )};
 
