@@ -45,7 +45,7 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
     console.log(alignment);
  
     // Read the json file for the data
-    d3.json("data.csv").then((data) => { //update line to call datagit a
+    d3.json("data.csv").then((data) => { //update line to call data
  
     // Clears dropdown
     d3.select("#selDataset").html("");   
@@ -76,7 +76,7 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
 
     /*--------------------------Bubble chart--------------------------------*/
  
-    // Remove Sample value and otuID from individual
+    // For alignment, find # of appearances and first year
     var appearances1 =idSample[0].appearances; //update line
     var firstYear= idSample[0].year; //update line
  
