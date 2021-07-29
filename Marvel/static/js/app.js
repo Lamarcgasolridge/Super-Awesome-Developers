@@ -45,8 +45,10 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
     console.log(alignment);
  
     // Read the json file for the data
-    d3.json("data.csv").then((data) => { //update line to call data
- 
+    d3.csv("data.csv").then(function(marvelData) {
+
+        console.log(marvelData);
+
     // Clears dropdown
     d3.select("#selDataset").html("");   
     
@@ -110,40 +112,41 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
 /*--------------------------Donut charts--------------------------------*/
  // Donut chart variables function donutChart(dataSelect, labelsSelect, nameSelect)
 
-    Function donutInfo():
-    //Hair variables
-        hairInfo = item.hair//update line*
-        var hairValue = hairInfo.length //update line*
-        var hairLabels = hairInfo
-        var hairName = 'Hair'
+    // function donutInfo()
+    // //Hair variables
+    //     hairInfo = item.hair//update line*
+    //     var hairValue = hairInfo.length //update line*
+    //     var hairLabels = hairInfo
+    //     var hairName = 'Hair'
 
-    //Sex variables 
-        sexInfo = item.sex//update line*
-        var sexValue = sexInfo.count //update line*
-        var sexLabels = sexInfo
-        var sexName = 'Sex'
+    // //Sex variables 
+    //     sexInfo = item.sex//update line*
+    //     var sexValue = sexInfo.count //update line*
+    //     var sexLabels = sexInfo
+    //     var sexName = 'Sex'
 
-    //Eye color variables 
-        eyeInfo = item.eye//update line*
-        var eyeValue = eyeInfo.count //update line*
-        var eyeLabels = eyeInfo
-        var eyeName = 'Eye'
+    // //Eye color variables 
+    //     eyeInfo = item.eye//update line*
+    //     var eyeValue = eyeInfo.count //update line*
+    //     var eyeLabels = eyeInfo
+    //     var eyeName = 'Eye'
 
-    //Identity variables 
-        idInfo = idem.id //update line*
-        var idValue = idInfo.count //update line*
-        var idLabels = idInfo
-        var idName = 'Identity'
+    // //Identity variables 
+    //     idInfo = idem.id //update line*
+    //     var idValue = idInfo.count //update line*
+    //     var idLabels = idInfo
+    //     var idName = 'Identity'
 
-    //Donut functions
-        donutChart(hairValue, hairLabels, hairName);
-        donutChart(sexValue, sexLabels, sexName);
-        donutChart(eyeValue, eyeLabels, eyeName);
-        donutChart(idValue, idLabels, idName);
+    // //Donut functions
+    //     donutChart(hairValue, hairLabels, hairName);
+    //     donutChart(sexValue, sexLabels, sexName);
+    //     donutChart(eyeValue, eyeLabels, eyeName);
+    //     donutChart(idValue, idLabels, idName);
 
     //update line - Put donut charts into HTML
         //https://www.d3-graph-gallery.com/graph/donut_basic.html
             
 
-    )};
-
+    });
+ });
+ 
