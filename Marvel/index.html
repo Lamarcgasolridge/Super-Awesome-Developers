@@ -22,9 +22,10 @@
         <link rel="stylesheet" href="css/styles.css" type="text/css" />
         <!--===== JS Libraries =====-->
         <script src="static/js/libraries/crossfilter.min.js"></script>
+        <script src="static/js/libraries/d3.min.js"></script>
         <script src="static/js/libraries/dc.min.js"></script>
         <script src="static/js/libraries/queue.min.js"></script>
-        <script src="static/js/app2.js"></script>
+        <script src="static/js/app.js"></script>
 
         <!--===== Title =====-->
         <title> The World of Avengers </title>
@@ -64,8 +65,12 @@
                             <button type="reset">Reset Graphs</button>
                         </div>
                         <div class=" col-sm-4 well">
-                            <h4>Select your character from the dropdown</h4>
+                            <h4>Select the alignment in the dropdown menu</h4>
                             <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                            <option value="Good Characters">Good</option>
+                            <option value="Bad Characters">Bad</option>
+                            <option value="Neutral Characters">Neutral</option>
+                        </select>
                         </div>
                     </div>
                 </div>

@@ -44,8 +44,8 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
     // Check if value is selected in dropdown
     console.log(alignment);
  
-    // Read the json file for the data
-    d3.csv("data.csv").then(function(marvelData) {
+    // Read the csv file for the data
+    d3.csv("Data\all_characters.csv").then(function(marvelData) {
 
         console.log(marvelData);
 
@@ -148,5 +148,5 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
             
 
     });
- });
+ };
  
