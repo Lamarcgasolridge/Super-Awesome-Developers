@@ -22,10 +22,12 @@
         <link rel="stylesheet" href="css/styles.css" type="text/css" />
         <!--===== JS Libraries =====-->
         <script src="static/js/libraries/crossfilter.min.js"></script>
+        <script src="jquery-csv.js"></script>
         <script src="static/js/libraries/d3.min.js"></script>
         <script src="static/js/libraries/dc.min.js"></script>
         <script src="static/js/libraries/queue.min.js"></script>
         <script src="static/js/app.js"></script>
+        <script src="static/js/data.js"></script>
 
         <!--===== Title =====-->
         <title> The World of Avengers </title>
@@ -67,9 +69,9 @@
                         <div class=" col-sm-4 well">
                             <h4>Select the alignment in the dropdown menu</h4>
                             <select id="selDataset" onchange="optionChanged(this.value)"></select>
-                            <option value="Good Characters">Good</option>
-                            <option value="Bad Characters">Bad</option>
-                            <option value="Neutral Characters">Neutral</option>
+                                <option value="Good Characters">Good</option>
+                                <option value="Bad Characters">Bad</option>
+                                <option value="Neutral Characters">Neutral</option>
                         </select>
                         </div>
                     </div>
@@ -147,49 +149,6 @@
                             </ul>
                             <div id="sample-metadata" class="panel-body"></div>
                         </div>
-
-                        <div class="col-md-6">
-                            <div id="bar"></div>
-                            <h3>Random Story (Placeholder Text)</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente,
-                                dolorum ipsum! Ipsa quae labore laborum eum molestias sint itaque
-                                blanditiis laboriosam doloremque quisquam. Labore necessitatibus
-                                suscipit, fuga distinctio explicabo architecto laborum aperiam
-                                eveniet ex ad neque veritatis sapiente, consequatur dolore minus
-                                accusantium officia optio aut quaerat nemo! Error odit, dignissimos
-                                hic illo natus ipsam maxime ratione? Sapiente animi consequuntur
-                                consectetur, eligendi labore doloribus nemo natus sit minima
-                                voluptatem aut officia eveniet blanditiis nisi necessitatibus veniam
-                                illo ratione, expedita tenetur! Officiis omnis et, enim impedit nam
-                                consequatur consequuntur, eum, facere eveniet nisi doloribus
-                                ducimus. Excepturi voluptas, nihil qui officiis harum error!</p>
-                        </div>
-                        <!-- <div class="col-md-4">
-                            <div id="donut"></div>
-                            <p>========Placeholder Donut Chart========</p>
-                            <img src="./images/donut_sample.png" alt="">
-                        </div> -->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="col-md-6">
-                            <div id="bubble"></div>
-                            <p>======Placeholder Bubble Chart========</p>
-                            <img src="./images/bubble_sample.png" alt="sample bubble chart"
-                                width="600" height="300">
-                        </div>
-                        <div class="col-md-6">
-                            <div id="bar"></div>
-                            <P>========Placeholder Bar Chart========</P>
-                            <img src="./images/bar_sample.png" alt="Sample bar chart" width="600"
-                                height="300">
-                        </div>
-                        <!-- <div class="col-md-4">
-                            <div id="donut"></div>
-                            <p>========Placeholder Donut Chart========</p>
-                            <img src="donut.png" alt="">
-                        </div> -->
                     </div>
                 </div>
             </div>

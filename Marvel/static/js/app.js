@@ -39,6 +39,7 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
 
 /*--------------------------Main function--------------------------------*/
  // Function for change on dropdown menu
+
  function optionChanged(alignment){
 
     // Check if value is selected in dropdown
