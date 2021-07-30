@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!--===== Meta data =====-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Jorden Vijayaratnam">
+        <!--===== CSS libraries =====-->
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            type="text/css" />
+        <link rel="stylesheet" href="static/css/libraries/dc.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
+            integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+            type="text/css" />
+        <!--===== My CSS libraries =====-->
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
+        <!--===== JS Libraries =====-->
+        <script src="static/js/libraries/crossfilter.min.js"></script>
+        <script src="jquery-csv.js"></script>
+        <script src="static/js/libraries/d3.min.js"></script>
+        <script src="static/js/libraries/dc.min.js"></script>
+        <script src="static/js/libraries/queue.min.js"></script>
+        <script src="static/js/app.js"></script>
+        <script src="static/js/data.js"></script>
+
+        <!--===== Title =====-->
+        <title> The World of Avengers </title>
+
+    </head>
+
+    <!-- ===== Bootstrap naviagtion bar ===== -->
+
+    <body class="background-image">
+        <!-- Adding wrapper -->
+        <div class="wrapper">
+            <nav class="navbar navbar-default sticky">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html"><b>Avengers</b>
+                            <img class="nav-avenger" src="./images/avenger_logo.png">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <!-- Adding jumbotron -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 jumbotron text-center">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="head-text col-md-12">
+                        <h1>Welcome to the Marvel Universe</h1>
+                        <h3>Use the interactive charts below to explore the Marvel world</h3>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-sm-4">
+                            <button type="reset">Reset Graphs</button>
+                        </div>
+                        <div class=" col-sm-4 well">
+                            <h4>Select the alignment in the dropdown menu</h4>
+                            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                                <option value="Good Characters">Good</option>
+                                <option value="Bad Characters">Bad</option>
+                                <option value="Neutral Characters">Neutral</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- First row: contains the bubble and bar charts -->
+                <div class="row first-charts">
+                    <div class="col-12">
+                        <div class="col-md-6">
+                            <div id="bubble">
+                                <h4> bubble chart </h4>
+                                <hr>
+                            </div>
+                        <div class="col-md-6">
+                            <div id="bar"></div>
+                            <P>========Placeholder Bar Chart========</P>
+                            <img src="./images/bar_sample.png" alt="Sample bar chart" width="600"
+                                height="300">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row second-charts">
+                    <div class="col-12">
+                        <div class="col-md-3">
+                            <div id="pie1"></div>
+                            <h3>Placeholder Pie Chart 1</h3>
+                            <img src="./images/pie_sample.png" alt="sample bubble chart" width="300"
+                                height="200">
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pie2"></div>
+                            <h3>Placeholder Pie Chart 2</h3>
+                            <img src="./images/pie_sample.png" alt="Sample bar chart" width="300"
+                                height="200">
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pie3"></div>
+                            <h3>Placeholder Pie Chart 3</h3>
+                            <img src="./images/pie_sample.png" alt="Sample bar chart" width="300"
+                                height="200">
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pie4"></div>
+                            <h3>Placeholder Pie Chart 4</h3>
+                            <img src="./images/pie_sample.png" alt="Sample bar chart" width="300"
+                                height="200">
+                        </div>
+                    </div>
+                </div>
+                <!-- Third Row -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-md-3">
+                            <div id="bubble"></div>
+                            <p>Sample image</p>
+                            <img src="./images/avenger_sample.jpg" alt="Avengers poster" width="200"
+                                height="300">
+                        </div>
+                        <div class=" col-sm-3 panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Character Facts </h3>
+                            </div>
+                            <ul>
+                                <li>HARD CODED</li>
+                                <li>Name: Spider-Man (Peter Parker)</li>
+                                <li>ID: Secret Identity</li>
+                                <li>Align: Good Characters</li>
+                                <li>Eye: Hazel Eyes</li>
+                                <li>Hair: Brown Hair</li>
+                                <li>Sex: Male Characters</li>
+                                <li>Appearances: 4037</li>
+                                <li>First Appearance: Aug-62</li>
+                                <li>Year: 1962</li>
+                            </ul>
+                            <div id="sample-metadata" class="panel-body"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--===== Footer =====-->
+            <footer class="footer">
+                <div class="bottom">Avenger Collections</div>
+            </footer>
+
+            <!--===== jQuery =====-->
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+                crossorigin="anonymous"></script>
+    </body>
+
+</html>
