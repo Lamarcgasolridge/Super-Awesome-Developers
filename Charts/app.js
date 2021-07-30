@@ -17,14 +17,14 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
       }];
       
       var layout = {
-        title: 'Donut chart of '+nameSelect, //update line - ask Falconi to double check calling variables in function
+        title: 'Donut chart of '+nameSelect, 
         annotations: [
           {
             font: {
               size: 20
             },
             showarrow: false,
-            text: nameSelect, //update line - ask Falconi to double check calling variables in function
+            text: nameSelect, 
             x: 0.17,
             y: 0.5
           }
@@ -108,7 +108,6 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
 
 
 /*--------------------------Donut charts--------------------------------*/
- // Donut chart variables function donutChart(dataSelect, labelsSelect, nameSelect)
 
     Function donutInfo():
     //Hair variables
@@ -134,7 +133,8 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
         var aliveValue = aliveInfo.count //update line*
         var aliveLabels = aliveInfo
         var aliveName = 'Alive?'
-
+        
+// Donut chart variables function donutChart(dataSelect, labelsSelect, nameSelect)
     //Donut functions
         donutChart(hairValue, hairLabels, hairName);
         donutChart(sexValue, sexLabels, sexName);
@@ -142,7 +142,7 @@ function donutChart(dataSelect, labelsSelect, nameSelect){
         donutChart(aliveValue, aliveLabels, aliveName);
 
     //update line - Put donut charts into HTML
-        //https://www.d3-graph-gallery.com/graph/donut_basic.html
+        
             
 
     )};
