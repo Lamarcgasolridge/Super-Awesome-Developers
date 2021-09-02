@@ -1,0 +1,19 @@
+create table Data(
+	"rowid" INTEGER,
+	"page_id" INTEGER,
+  	"name" TEXT,
+  	"urlslug" TEXT,
+  	"ID" TEXT,
+  	"ALIGN" TEXT,
+  	"EYE" TEXT,
+ 	"HAIR" TEXT,
+	"SEX" TEXT,
+  	"GSM" TEXT,
+  	"ALIVE" TEXT,
+  	"APPEARANCES" INTEGER,
+  	"FIRST APPEARANCE" TEXT,
+  	"Year" INTEGER
+);
+
+
+
